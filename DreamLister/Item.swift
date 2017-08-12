@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import CoreData
+
+extension Item {
+    public override func awakeFromNib() {
+        super.awakeFromInsert()
+        
+        self.created = NSDate()
+    }
+}
